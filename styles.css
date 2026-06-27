@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   WickenburgHorseProperty.com — Styles
+   CaveCreekHomesForSale.com — Styles
    Mobile-first, 320px minimum
    Georgia serif throughout — magazine publication standard
 ═══════════════════════════════════════════════════════════ */
@@ -34,6 +34,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; overflow-x: hidden; font-family: Georgia, serif; font-size: 16px; line-height: 1.6; overflow-wrap: break-word; word-break: break-word; hyphens: auto; background: #fff; color: #1a1208; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 a, button { touch-action: manipulation; }
+.corridor-card, .guide-card, .prop-type-item, .editorial-card, .service-slot { touch-action: manipulation; }
 a:focus-visible, button:focus-visible { outline: 3px solid #C8A96E; outline-offset: 2px; border-radius: 2px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -88,7 +89,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #C8A96E; outline-offs
 .hp-hero-content { max-width: 760px; margin: 0 auto; padding: 0 24px 36px; width: 100%; text-align: center; }
 .hp-hero-kicker { font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #c9973a; margin: 0 0 8px; }
 .hp-hero-title { font-size: 2.6rem; line-height: 1.15; color: #fff; margin: 0 0 10px; }
-.hp-hero-sub { font-size: 1.15rem; color: rgba(255,255,255,.82); margin: 0 0 22px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hp-hero-sub { font-size: 1rem; color: rgba(255,255,255,.82); margin: 0 0 22px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto; }
 .hp-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
 /* ════════════════════════════════════════
@@ -132,6 +133,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid #C8A96E; outline-offs
 ════════════════════════════════════════ */
 /* Skip-nav landing: clear sticky nav height */
 #main-content { scroll-margin-top: 50px; }
+.page-main h2[id],
+.page-main h3[id] { scroll-margin-top: 54px; }
 .hp-wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; font-family: Georgia, serif; line-height: 1.7; }
 .hp-rule { border: none; border-top: 1px solid #e8e0d8; margin: 0; }
 
@@ -313,6 +316,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid #C8A96E; outline-offs
 .page-main a, .hp-section ul li a { text-underline-offset: 3px; }
 .page-main ul.kp { list-style: disc; padding-left: 20px; }
 .page-main ul.kp li { display: list-item; border-bottom: none; padding: 3px 0; min-height: unset; }
+.guide-list { list-style: none; margin: 12px 0 20px; padding: 0; }
+.guide-list li { padding: 12px 0; border-bottom: 1px solid #f0ebe4; font-size: .97rem; line-height: 1.55; min-height: 44px; display: flex; align-items: flex-start; }
+.guide-list li:last-child { border-bottom: none; }
+.guide-list li a { color: #2c5f2e; text-decoration: none; font-weight: 700; }
+.guide-list li a:hover { text-decoration: underline; }
+
 h2.related-heading { margin-top: 32px; padding-top: 16px; border-top: 2px solid #e8e0d8; font-size: 1em; text-transform: uppercase; letter-spacing: .06em; color: #666; }
 h2.related-heading + ul { margin-top: 10px; }
 #next-page-link { margin: 30px 0 36px; padding: 16px; background: #f4f9f4; border-left: 4px solid #8b5e3c; border-radius: 4px; }
@@ -349,6 +358,7 @@ h2.related-heading + ul { margin-top: 10px; }
 @media (min-width: 641px) {
   .hp-hero-wrap { height: 500px; }
   .hp-hero-title { font-size: 3.2rem; }
+  .hp-hero-sub { font-size: 1.15rem; }
   /* Editorial: feature left, stack right, explicit row anchoring */
   .editorial-grid { grid-template-columns: 1fr 1fr; }
   .editorial-card-feature { grid-column: 1; grid-row: 1 / 3; display: flex; flex-direction: column; min-height: 280px; }
@@ -367,8 +377,8 @@ h2.related-heading + ul { margin-top: 10px; }
   .stats-bar-inner { flex-wrap: nowrap; }
   .stat-divider { display: block; }
   .stat-item { flex: none; padding: 10px 8px; }
-  .stat-number { font-size: 1rem; }
-  .stat-label { font-size: .65rem; }
+  .stat-number { font-size: 1.05rem; }
+  .stat-label { font-size: .67rem; }
   /* Buy-sell consistent with other 641px breakpoints */
   .buy-sell-grid { grid-template-columns: 1fr 1fr; }
   .buy-sell-card { padding: 18px; }
@@ -414,6 +424,7 @@ h2.related-heading + ul { margin-top: 10px; }
   .logo-full { display: none; }
   .logo-short { display: inline; }
   .nav-toggle { display: flex; }
+  .nav-logo { font-size: .82rem; }
   .nav-primary { display: none; }
   .nav-secondary-bar { display: none; }
   .nav-inner { padding: 0 12px; }
@@ -422,7 +433,7 @@ h2.related-heading + ul { margin-top: 10px; }
   /* Hero */
   .hp-hero-wrap { height: 320px; }
   .hp-hero-title { font-size: 1.75rem; }
-  .hp-hero-sub { font-size: 1.025rem; }
+  .hp-hero-sub { font-size: .92rem; line-height: 1.5; }
   .hp-hero-content { padding: 0 16px 24px; }
   .hp-btn { font-size: .85rem; padding: 10px 16px; }
 
@@ -434,9 +445,9 @@ h2.related-heading + ul { margin-top: 10px; }
   /* Stats bar */
   .stat-divider { display: none; }
   .stats-bar-inner { justify-content: center; gap: 0; flex-wrap: wrap; }
-  .stat-item { padding: 8px 6px; flex: 0 0 calc(33.333% - 4px); min-width: 0; max-width: calc(33.333% - 4px); }
-  .stat-number { font-size: .88rem; }
-  .stat-label { font-size: .58rem; }
+  .stat-item { padding: 10px 6px; flex: 0 0 calc(50% - 4px); min-width: 0; max-width: calc(50% - 4px); }
+  .stat-number { font-size: .92rem; }
+  .stat-label { font-size: .64rem; }
 
   /* Wrap */
   .hp-wrap { padding: 0 16px; }
@@ -452,7 +463,7 @@ h2.related-heading + ul { margin-top: 10px; }
   .page-main h2 { font-size: 1.15em; margin-top: 28px; }
   .page-main h3 { font-size: 1.05em; }
   .page-main ul li { padding: 8px 0; }
-  .page-main ul li a { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .page-main ul li a { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
   .page-main ul.kp li { overflow: visible; display: list-item; }
   h2.related-heading + ul li a { -webkit-line-clamp: 3; }
 
@@ -508,10 +519,22 @@ h2.related-heading + ul { margin-top: 10px; }
 ════════════════════════════════════════ */
 @media (max-width: 360px) {
   .hp-hero-wrap { height: 280px; }
-  .hp-hero-title { font-size: 1.5rem; }
+  .hp-hero-title { font-size: 1.42rem; }
+  .hp-hero-sub { font-size: .82rem; }
+  .stat-item { flex: 0 0 calc(50% - 4px); padding: 8px 4px; }
+  .stat-number { font-size: .84rem; }
+  .stat-label { font-size: .58rem; }
   .corridor-badge { display: none; }
   .network-footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ════════════════════════════════════════
+   TABLE OVERFLOW — inner pages
+════════════════════════════════════════ */
+.page-main table { width: 100%; border-collapse: collapse; }
+.page-main .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.hotel-card { overflow-x: auto; }
+.hotel-card table { min-width: 480px; }
 
 /* ════════════════════════════════════════
    BREADCRUMB — inner pages
@@ -871,7 +894,7 @@ h2.related-heading + ul { margin-top: 10px; }
 
   /* Publisher attribution at top */
   .page-main::before {
-    content: "WickenburgHorseProperty.com — Published by Bridle & Bit Magazine";
+    content: "CaveCreekHomesForSale.com — Published by Bridle & Bit Magazine";
     display: block;
     font-size: 8pt;
     color: #666;
